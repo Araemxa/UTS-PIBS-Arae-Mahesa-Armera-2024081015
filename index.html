@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <h2 class="loading-text">Loading Portofolio</h2>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="profile-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                </svg>
+            </div>
+            <h1 class="site-title">Profil Mahasiswa</h1>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle" id="nav-toggle">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active" data-section="biodata">Biodata</a></li>
+                <li><a href="#" class="nav-link" data-section="pendidikan">Pendidikan</a></li>
+                <li><a href="#" class="nav-link" data-section="pengalaman">Pengalaman</a></li>
+                <li><a href="#" class="nav-link" data-section="keahlian">Keahlian</a></li>
+                <li><a href="#" class="nav-link" data-section="publikasi">Publikasi</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Main Content Section -->
+        <section id="main-content">
+            <!-- Biodata Content -->
+            <div class="content-section active" id="biodata">
+                <h2 class="section-title">Biodata</h2>
+                <div class="biodata-content">
+                    <div class="biodata-item">
+                        <div class="biodata-label">NIM:</div>
+                        <div class="biodata-value">0423087102</div>
+                    </div>
+                    <div class="biodata-item">
+                        <div class="biodata-label">Nama:</div>
+                        <div class="biodata-value">Augury El Rayeb, S.Kom., MMSI.</div>
+                    </div>
+                    <div class="biodata-item">
+                        <div class="biodata-label">Agama:</div>
+                        <div class="biodata-value">Islam</div>
+                    </div>
+                    <div class="biodata-item">
+                        <div class="biodata-label">Tanggal Lahir:</div>
+                        <div class="biodata-value">23 Agustus 1971</div>
+                    </div>
+                    <div class="biodata-item">
+                        <div class="biodata-label">Tempat Lahir:</div>
+                        <div class="biodata-value">Jakarta</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pendidikan Content -->
+            <div class="content-section" id="pendidikan">
+                <h2 class="section-title">Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>Universitas Pembangunan Jaya</h3>
+                            <div class="timeline-date">2022 - Sekarang</div>
+                            <div class="timeline-desc">S1 Sistem Informasi - IPK: 3.85</div>
+                            <p>Fokus pada pengembangan web, database, dan pemrograman script dengan berbagai project aplikasi web responsive</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>SMA Negeri 1 Jakarta</h3>
+                            <div class="timeline-date">2019 - 2022</div>
+                            <div class="timeline-desc">Jurusan IPA - Nilai UN: 92.5</div>
+                            <p>Aktif di ekstrakurikuler komputer dan robotika, serta menjadi ketua divisi IT OSIS</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>SMP Negeri 5 Jakarta</h3>
+                            <div class="timeline-date">2016 - 2019</div>
+                            <div class="timeline-desc">Nilai UN: 89.0</div>
+                            <p>Juara 1 Lomba Coding tingkat Kota Jakarta tahun 2018</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pengalaman Content -->
+            <div class="content-section" id="pengalaman">
+                <h2 class="section-title">Pengalaman</h2>
+                <div class="experience-grid">
+                    <div class="experience-card">
+                        <div class="card-icon">💼</div>
+                        <h3>Web Developer Intern</h3>
+                        <div class="experience-company">PT Digital Inovasi Indonesia</div>
+                        <div class="experience-date">Juni 2024 - Agustus 2024</div>
+                        <ul class="experience-list">
+                            <li>Mengembangkan website company profile menggunakan HTML, CSS, dan JavaScript</li>
+                            <li>Implementasi responsive design untuk berbagai perangkat</li>
+                            <li>Kolaborasi dengan tim designer dan backend developer</li>
+                            <li>Maintenance dan bug fixing aplikasi web existing</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Asisten Laboratorium</h3>
+                        <div class="experience-company">Lab Sistem Informasi UPJ</div>
+                        <div class="experience-date">Februari 2024 - Sekarang</div>
+                        <ul class="experience-list">
+                            <li>Membantu mahasiswa dalam praktikum pemrograman web</li>
+                            <li>Membuat modul dan tutorial pembelajaran</li>
+                            <li>Mengelola sistem dan peralatan laboratorium</li>
+                            <li>Memberikan konsultasi teknis untuk project mahasiswa</li>
+                        </ul>
+                    </div>
+                    <div class="experience-card">
+                        <div class="card-icon">🏆</div>
+                        <h3>Peserta Hackathon</h3>
+                        <div class="experience-company">Jakarta Tech Fest 2024</div>
+                        <div class="experience-date">Maret 2024</div>
+                        <ul class="experience-list">
+                            <li>Mengembangkan aplikasi manajemen tugas berbasis web</li>
+                            <li>Meraih juara 3 dari 50 tim peserta</li>
+                            <li>Kolaborasi tim dalam waktu terbatas (24 jam)</li>
+                            <li>Presentasi produk di hadapan investor dan juri</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Keahlian Content -->
+            <div class="content-section" id="keahlian">
+                <h2 class="section-title">Keahlian</h2>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML & CSS</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>PHP</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Tools & Frameworks</h3>
+                        <div class="tools-grid">
+                            <div class="tool-badge">Git & GitHub</div>
+                            <div class="tool-badge">VS Code</div>
+                            <div class="tool-badge">Figma</div>
+                            <div class="tool-badge">Bootstrap</div>
+                            <div class="tool-badge">MySQL</div>
+                            <div class="tool-badge">Postman</div>
+                            <div class="tool-badge">React JS</div>
+                            <div class="tool-badge">Node.js</div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3>Soft Skills</h3>
+                        <div class="soft-skills">
+                            <div class="soft-skill-tag">Problem Solving</div>
+                            <div class="soft-skill-tag">Teamwork</div>
+                            <div class="soft-skill-tag">Communication</div>
+                            <div class="soft-skill-tag">Time Management</div>
+                            <div class="soft-skill-tag">Critical Thinking</div>
+                            <div class="soft-skill-tag">Adaptability</div>
+                            <div class="soft-skill-tag">Creativity</div>
+                            <div class="soft-skill-tag">Leadership</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publikasi Content -->
+            <div class="content-section" id="publikasi">
+                <h2 class="section-title">Publikasi</h2>
+                <div class="publication-grid">
+                    <div class="publication-card">
+                        <div class="publication-header">
+                            <span class="publication-type">Project</span>
+                            <span class="publication-date">Desember 2024</span>
+                        </div>
+                        <h3>Sistem Informasi Perpustakaan</h3>
+                        <p>Aplikasi web untuk manajemen perpustakaan dengan fitur peminjaman, pengembalian, dan katalog buku. Dibangun menggunakan HTML, CSS, JavaScript, dan PHP dengan database MySQL.</p>
+                        <div class="publication-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                        </div>
+                    </div>
+                    <div class="publication-card">
+                        <div class="publication-header">
+                            <span class="publication-type">Article</span>
+                            <span class="publication-date">November 2024</span>
+                        </div>
+                        <h3>Responsive Web Design Best Practices</h3>
+                        <p>Artikel tentang praktik terbaik dalam membuat website responsive, dipublikasikan di blog kampus. Membahas media queries, flexbox, dan grid system secara detail.</p>
+                        <div class="publication-tags">
+                            <span>Web Design</span>
+                            <span>Responsive</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                    <div class="publication-card">
+                        <div class="publication-header">
+                            <span class="publication-type">Tool</span>
+                            <span class="publication-date">Oktober 2024</span>
+                        </div>
+                        <h3>Portfolio Website Generator</h3>
+                        <p>Tool sederhana untuk generate template portfolio website. User dapat customize warna, layout, dan konten melalui form input dengan preview real-time.</p>
+                        <div class="publication-tags">
+                            <span>JavaScript</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Aside Section -->
+    <aside id="sidebar">
+        <div class="aside-card">
+            <h3 class="aside-title">Hobi</h3>
+            <ul class="hobby-list">
+                <li>Bulutangkis</li>
+                <li>Bola</li>
+                <li>Pemrograman</li>
+                <li>Gaming</li>
+            </ul>
+        </div>
+    </aside>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p>Twitter: @akun</p>
+                <p>FB: @akun</p>
+                <p>Instagram: @akun</p>
+            </div>
+            <div class="footer-center">
+                <p>© Copyright 2020. All Rights Reserved</p>
+            </div>
+            <div class="footer-right">
+                <p><strong>NAMA WEB</strong></p>
+                <p>Slogan/Keterangan/Informasi Web</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Hide all content sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Show selected content section
+                const sectionId = this.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Close mobile menu after clicking
+                if (window.innerWidth < 768) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
