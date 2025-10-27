@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-container">
+            <div class="spinner"></div>
+            <h2 class="loading-text">Loading Portofolio</h2>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
 
     <!-- Header Section -->
     <header>
@@ -21,18 +33,17 @@
     <!-- Navigation Section -->
     <nav class="navbar">
         <div class="nav-container">
-            <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle-label">
+            <button class="nav-toggle" id="nav-toggle">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
-            </label>
-            <ul class="nav-menu">
-                <li><a href="#biodata" class="nav-link">Biodata</a></li>
-                <li><a href="#pendidikan" class="nav-link">Pendidikan</a></li>
-                <li><a href="#pengalaman" class="nav-link">Pengalaman</a></li>
-                <li><a href="#keahlian" class="nav-link">Keahlian</a></li>
-                <li><a href="#publikasi" class="nav-link">Publikasi</a></li>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active" data-section="biodata">Biodata</a></li>
+                <li><a href="#" class="nav-link" data-section="pendidikan">Pendidikan</a></li>
+                <li><a href="#" class="nav-link" data-section="pengalaman">Pengalaman</a></li>
+                <li><a href="#" class="nav-link" data-section="keahlian">Keahlian</a></li>
+                <li><a href="#" class="nav-link" data-section="publikasi">Publikasi</a></li>
             </ul>
         </div>
     </nav>
@@ -42,7 +53,7 @@
         <!-- Main Content Section -->
         <section id="main-content">
             <!-- Biodata Content -->
-            <div class="content-section" id="biodata">
+            <div class="content-section active" id="biodata">
                 <h2 class="section-title">Biodata</h2>
                 <div class="biodata-content">
                     <div class="biodata-item">
@@ -304,5 +315,55 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Loading screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('loading-screen').style.display = 'none';
+                }, 500);
+            }, 1500);
+        });
+
+        // Navigation toggle
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        navToggle.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navigation links
+        const navLinks = document.querySelectorAll('.nav-link');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                navLinks.forEach(l => l.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                // Hide all content sections
+                contentSections.forEach(section => section.classList.remove('active'));
+                
+                // Show selected content section
+                const sectionId = this.getAttribute('data-section');
+                document.getElementById(sectionId).classList.add('active');
+                
+                // Close mobile menu after clicking
+                if (window.innerWidth < 768) {
+                    navMenu.classList.remove('active');
+                    navToggle.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
